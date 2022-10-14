@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nest-js-logger
+  annotations:
+    github.com/project-slug: madeiramadeirabr/nest-js-logger
+  tags:
+    - poc
+spec:
+  type: service
+  lifecycle: production
+  owner: squad-core-apis-admin
+  
