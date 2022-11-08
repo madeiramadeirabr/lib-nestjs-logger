@@ -15,6 +15,6 @@
       "noImplicitAny": false,
       "skipLibCheck": true
     },
-    "include": ["libs/**/*.ts"],
+    "include": ["libs/**/*.ts", "libs/tests/**/*.ts"],
     "exclude": ["node_modules", "dist"]
   }
