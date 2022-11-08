@@ -6,7 +6,7 @@
   "scripts": {
     "format": "prettier --write \"**/*.ts\"",
     "lint": "eslint \"src/**/*.ts\" --fix",
-    "test": "jest --config=jest.json"
+    "test": "jest --config=jest-config.json"
   },
   "repository": {
     "type": "git",
@@ -56,6 +56,7 @@
   "dependencies": {
     "@newrelic/winston-enricher": "^4.0.0",
     "nest-winston": "^1.8.0",
+    "reflect-metadata": "^0.1.13",
     "winston": "^3.8.2"
   }
 }
