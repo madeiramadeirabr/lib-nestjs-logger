@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Nestjs library to provide the easy and maintainable  mode to following mmrfc convention",
   "main": "./index.js",
-
   "types": "./index.d.ts",
   "scripts": {
     "format": "prettier --write \"**/*.ts\"",
@@ -59,8 +58,8 @@
   },
   "homepage": "https://github.com/madeiramadeirabr/nest-js-logger#readme",
   "dependencies": {
-    "@newrelic/winston-enricher": "^4.0.0",
-    "nest-winston": "^1.8.0",
+    "@newrelic/winston-enricher": "^2.1.0",
+    "nest-winston": "^1.7.1",
     "reflect-metadata": "^0.1.13",
     "winston": "^3.8.2"
   }
