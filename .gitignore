@@ -1,7 +1,8 @@
 .eslintcache
 
 # compiled output
-/node_modules
+./node_modules
+./dist
 
 # Logs
 logs
@@ -33,3 +34,4 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+node_modules
