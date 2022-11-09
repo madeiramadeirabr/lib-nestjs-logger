@@ -3,18 +3,23 @@
       "module": "commonjs",
       "declaration": true,
       "removeComments": true,
+      "declarationMap": true,
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
       "esModuleInterop": true,
       "target": "es6",
-      "sourceMap": false,
+      "sourceMap": true,
       "outDir": "./dist",
       "rootDir": "./libs",
       "baseUrl": "./",
       "noLib": false,
       "noImplicitAny": false,
-      "skipLibCheck": true
+      "skipLibCheck": true,
+      "allowSyntheticDefaultImports": true,
+      "moduleResolution": "Node"
     },
     "include": ["libs/**/*.ts", "libs/tests/**/*.ts"],
     "exclude": ["node_modules", "dist"]
   }
+
+  
