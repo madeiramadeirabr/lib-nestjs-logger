@@ -1,0 +1,1 @@
+{"version":3,"file":"nest-js-logger.module.d.ts","sourceRoot":"","sources":["../../libs/src/nest-js-logger.module.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAU,MAAM,gBAAgB,CAAC;AACvD,OAAO,EAAiB,oBAAoB,EAAE,MAAM,cAAc,CAAC;AAMnE,qBAOa,kBAAkB;WACf,OAAO,CAAC,OAAO,CAAC,EAAE,oBAAoB,GAAG,aAAa;CASrE"}
