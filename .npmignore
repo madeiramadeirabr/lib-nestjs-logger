@@ -18,3 +18,4 @@ renovate.json
 node_modules
 tsconfig*.json
 !dist/**/*
+!**/*.d.ts
