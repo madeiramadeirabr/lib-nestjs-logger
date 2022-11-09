@@ -9,8 +9,5 @@
         "tsConfigPath": "libs/tsconfig.lib.json"
       }
     }
-  },
-  "compilerOptions": {
-    "webpack": false
   }
 }
