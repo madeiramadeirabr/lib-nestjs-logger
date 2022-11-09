@@ -1,12 +1,12 @@
-### Titulo
-Nest Js Logger
+# Nest Js Logger
 
 ### Descrição
 
 ### Contexto de negócio (Com quais outros sistemas faz interação)
 
 ### Squad
-Core-Apis
+
+[Catalog](https://github.com/orgs/madeiramadeirabr/teams/squad-catalog-admin)
 
 ### Requisitos (Se aplicavel)
 
