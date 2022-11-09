@@ -69,4 +69,3 @@ const getWinstonSettingsForRoot = (winstonModuleOptions) => {
     return defaultWinstonConfiguration;
 };
 exports.getWinstonSettingsForRoot = getWinstonSettingsForRoot;
-//# sourceMappingURL=nest-js-logger-module-helper.js.map

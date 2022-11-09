@@ -8,7 +8,6 @@
       "experimentalDecorators": true,
       "esModuleInterop": true,
       "target": "es6",
-      "sourceMap": true,
       "outDir": "./dist",
       "rootDir": "./libs",
       "baseUrl": "./",
@@ -16,7 +15,6 @@
       "noImplicitAny": false,
       "skipLibCheck": true,
       "allowSyntheticDefaultImports": true,
-      "moduleResolution": "Node"
     },
     "include": ["libs/**/*.ts", "libs/tests/**/*.ts"],
     "exclude": ["node_modules", "dist"]

@@ -33,4 +33,3 @@ NestJsLoggerModule = NestJsLoggerModule_1 = __decorate([
     })
 ], NestJsLoggerModule);
 exports.NestJsLoggerModule = NestJsLoggerModule;
-//# sourceMappingURL=nest-js-logger.module.js.map

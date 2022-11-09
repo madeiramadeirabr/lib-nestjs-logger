@@ -79,4 +79,3 @@ NestJsLoggerService = __decorate([
     __metadata("design:paramtypes", [winston_1.Logger])
 ], NestJsLoggerService);
 exports.NestJsLoggerService = NestJsLoggerService;
-//# sourceMappingURL=nest-js-logger.service.js.map

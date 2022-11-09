@@ -18,4 +18,3 @@ __exportStar(require("./nest-js-logger.module"), exports);
 __exportStar(require("./nest-js-logger.service"), exports);
 __exportStar(require("./helpers"), exports);
 __exportStar(require("./types"), exports);
-//# sourceMappingURL=index.js.map
