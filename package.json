@@ -2,12 +2,9 @@
   "name": "nest-js-logger",
   "version": "1.0.0",
   "description": "Nestjs library to provide the easy and maintainable  mode to following mmrfc convention",
-  "main": "./dist/src/index.js",
+  "main": "./index.js",
 
-  "types": "./dist/src/index.d.ts",
-  "files": [
-    "./"
-  ],
+  "types": "./index.d.ts",
   "scripts": {
     "format": "prettier --write \"**/*.ts\"",
     "lint": "eslint \"src/**/*.ts\" --fix",
