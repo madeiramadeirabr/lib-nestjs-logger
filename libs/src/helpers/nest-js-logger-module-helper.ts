@@ -10,7 +10,7 @@ const getWinstonFormattersByEnvHelper = (): Format[] => {
   if (process.env.APPLICATION_ENV === 'production' || process.env.APPLICATION_ENV === 'staging') {
     /* eslint @typescript-eslint/no-var-requires: "off" */
     const newrelicFormatter = require('@newrelic/winston-enricher');
-    return [...formatters, newrelicFormatter()];
+    return [...formatters, newrelicFormatter(winston)];
   }
 
   if (process.env.APPLICATION_ENV === 'development') {
@@ -40,13 +40,13 @@ const getDefaultWinstonConfiguration = () => {
     level: process.env.APPLICATION_ENV === 'development' ? 'debug' : 'info',
     format: winston.format.combine(...getWinstonFormattersByEnvHelper()),
     defaultMeta: {
-      service_name: process.env.NEW_RELIC_APPLICATION_NAME,
+      service_name: process.env.NEW_RELIC_APP_NAME,
     },
     transports: [new winston.transports.Console()],
   }
 }
 
-export const getWinstonSettingsForRoot = (winstonModuleOptions?: WinstonModuleOptions) => {
+export const getWinstonSettingsForRoot = (winstonModuleOptions?: WinstonModuleOptions,) => {
   if (winstonModuleOptions) {
     return winstonModuleOptions
   }
