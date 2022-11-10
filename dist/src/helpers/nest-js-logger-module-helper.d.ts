@@ -18,3 +18,4 @@ export declare const getWinstonSettingsForRoot: (winstonModuleOptions?: WinstonM
     };
     transports: winston.transports.ConsoleTransportInstance[];
 };
+export declare const mergeWinstonSettingsParams: (winstonModuleOptions?: WinstonModuleOptions) => WinstonModuleOptions;

@@ -48,10 +48,23 @@ const getDefaultWinstonConfiguration = () => {
 
 export const getWinstonSettingsForRoot = (winstonModuleOptions?: WinstonModuleOptions,) => {
   if (winstonModuleOptions) {
-    return winstonModuleOptions
+    return mergeWinstonSettingsParams(winstonModuleOptions)
   }
+
+
 
   const defaultWinstonConfiguration = getDefaultWinstonConfiguration()
 
   return defaultWinstonConfiguration
+}
+
+export const mergeWinstonSettingsParams = (winstonModuleOptions?: WinstonModuleOptions) => {
+  const defaultConfiguration = getDefaultWinstonConfiguration()
+
+
+
+
+  const mergeWinston: WinstonModuleOptions = Object.assign({}, defaultConfiguration, winstonModuleOptions)
+
+  return mergeWinston
 }

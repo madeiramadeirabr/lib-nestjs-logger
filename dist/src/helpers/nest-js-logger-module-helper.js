@@ -23,13 +23,13 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getWinstonSettingsForRoot = void 0;
+exports.mergeWinstonSettingsParams = exports.getWinstonSettingsForRoot = void 0;
 const winston = __importStar(require("winston"));
 const getWinstonFormattersByEnvHelper = () => {
     const formatters = [winston.format.timestamp(), winston.format.json()];
     if (process.env.APPLICATION_ENV === 'production' || process.env.APPLICATION_ENV === 'staging') {
         const newrelicFormatter = require('@newrelic/winston-enricher');
-        return [...formatters, newrelicFormatter()];
+        return [...formatters, newrelicFormatter(winston)];
     }
     if (process.env.APPLICATION_ENV === 'development') {
         return [
@@ -56,16 +56,22 @@ const getDefaultWinstonConfiguration = () => {
         level: process.env.APPLICATION_ENV === 'development' ? 'debug' : 'info',
         format: winston.format.combine(...getWinstonFormattersByEnvHelper()),
         defaultMeta: {
-            service_name: process.env.NEW_RELIC_APPLICATION_NAME,
+            service_name: process.env.NEW_RELIC_APP_NAME,
         },
         transports: [new winston.transports.Console()],
     };
 };
 const getWinstonSettingsForRoot = (winstonModuleOptions) => {
     if (winstonModuleOptions) {
-        return winstonModuleOptions;
+        return (0, exports.mergeWinstonSettingsParams)(winstonModuleOptions);
     }
     const defaultWinstonConfiguration = getDefaultWinstonConfiguration();
     return defaultWinstonConfiguration;
 };
 exports.getWinstonSettingsForRoot = getWinstonSettingsForRoot;
+const mergeWinstonSettingsParams = (winstonModuleOptions) => {
+    const defaultConfiguration = getDefaultWinstonConfiguration();
+    const mergeWinston = Object.assign({}, defaultConfiguration, winstonModuleOptions);
+    return mergeWinston;
+};
+exports.mergeWinstonSettingsParams = mergeWinstonSettingsParams;
