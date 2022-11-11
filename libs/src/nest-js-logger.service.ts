@@ -17,6 +17,7 @@ export class NestJsLoggerService implements LoggerService {
   public get trackId() {
     if (!this._trackId) {
       this._trackId = this.createTrackId();
+      console.log("test")
     }
     return this._trackId;
   }
