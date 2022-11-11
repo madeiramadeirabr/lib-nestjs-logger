@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { WINSTON_MODULE_PROVIDER } from 'nest-winston';
 import { Logger } from 'winston';
 
-import { NestJsLoggerService } from '../../nest-js-logger/src/nest-js-logger.service';
+import { NestJsLoggerService } from '../../libs/src/nest-js-logger.service';
 import { makeLoggerParamsFixture } from '../fixtures';
 
 const winstonLoggerFixture = ({
