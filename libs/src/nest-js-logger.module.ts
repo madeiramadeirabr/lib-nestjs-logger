@@ -1,7 +1,7 @@
 import { DynamicModule, Module } from '@nestjs/common';
 import { WinstonModule, WinstonModuleOptions } from 'nest-winston';
 
-import { getWinstonSettingsForRoot } from './helpers/nest-js-logger-module-helper';
+import { getWinstonSettingsForRoot } from './helpers';
 import { NestJsLoggerService } from './nest-js-logger.service';
 
 

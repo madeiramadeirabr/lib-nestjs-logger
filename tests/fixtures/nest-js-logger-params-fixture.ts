@@ -1,4 +1,4 @@
-import { FormatedContentType } from "libs/nest-js-logger/src/types/formated-content-type"
+import { FormatedContentType } from "../../libs/src/types"
 
 
 export const makeLoggerParamsFixture = (
