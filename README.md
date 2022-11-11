@@ -1,17 +1,38 @@
 # Nest Js Logger
 
-### Descrição
+![nodejs versão 14.x](https://img.shields.io/badge/nodejs-v14.x-green) ![typescript versão 4.8.3](https://img.shields.io/badge/typescript-v4.8.3-blue) ![nestjs versão 6+](https://img.shields.io/badge/nestjs-v6+-red)
 
-### Contexto de negócio (Com quais outros sistemas faz interação)
+##### The Nest Js Logger is a inner source library to facility and standardize the way of logs works in nestjs projects at madeiramadeira, following the MMRFC rules.
 
 ### Squad
 
 [Catalog](https://github.com/orgs/madeiramadeirabr/teams/squad-catalog-admin)
 
-### Requisitos (Se aplicavel)
+## Installation
 
-### Configurações para uso (Se aplicavel)
+To use the library, you need to install with NPM or YARN:
 
-### Exemplos de uso (Se aplicavel)
+###### YARN
 
-### exit codes (Status Code, Result)
+```bash
+$ yarn add git+ssh://git@github.com:madeiramadeirabr/nest-js-logger.git
+```
+
+###### NPM
+
+```bash
+$ npm install git+ssh://git@github.com:madeiramadeirabr/nest-js-logger.git
+```
+
+## Test
+
+To run the tests, run the commands below:
+
+```bash
+# running the tests
+$ npm run test
+```
+
+## Documentation
+
+To view examples of how to use the library, click on the following link: [Doc](./docs/techdocs.md).
