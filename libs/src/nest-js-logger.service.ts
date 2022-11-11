@@ -2,7 +2,8 @@ import { Inject, Injectable, LoggerService } from '@nestjs/common';
 
 import { Logger } from 'winston';
 import crypto from 'crypto'
-import { FormatedContentType } from './types/formated-content-type';
+
+import { FormatedContentType } from './types';
 
 @Injectable()
 export class NestJsLoggerService implements LoggerService {
