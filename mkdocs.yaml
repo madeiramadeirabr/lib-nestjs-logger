@@ -1,0 +1,10 @@
+site_name: 'Portal do Desenvolvedor'
+site_description: 'Documentação de apoio do Portal do Desenvolvedor'
+repo_url: https://github.com/madeiramadeirabr/nest-js-logger
+edit_uri: edit/production/docs
+
+plugins:
+  - techdocs-core
+
+nav:
+  - TechDocs: techdocs.md
