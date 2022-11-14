@@ -7,7 +7,7 @@ on:
 
 jobs:
   release:
-    name: publish
+    name: Publish
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -37,6 +37,9 @@ jobs:
 
       - name: Build packages /dist
         run: yarn build
+        
+      - name: Run unit tests
+        run: yarn test
 
       - uses: actions/setup-node@v3
         with:
