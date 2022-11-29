@@ -15,7 +15,7 @@
 
 ## Descrição
 
-O Nest Js Logger é uma biblioteca que implementa as a padronização de logs da [MMRFC](https://madeiramadeira.atlassian.net/l/cp/an1pP602) para projetos em nestjs na madeiramadeira.
+O Nest Js Logger é uma biblioteca que implementa a padronização de logs da [MMRFC](https://madeiramadeira.atlassian.net/l/cp/an1pP602) para projetos em nestjs na madeiramadeira.
 
 ## Configurações
 
