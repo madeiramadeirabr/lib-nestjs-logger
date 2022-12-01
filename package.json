@@ -1,5 +1,5 @@
 {
-  "name": "nest-js-logger",
+  "name": "mm-nestjs-logger",
   "version": "1.0.0",
   "description": "Nestjs library to provide the easy and maintainable  mode to following mmrfc convention",
   "main": "./index.js",
