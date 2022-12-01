@@ -20,12 +20,7 @@ jobs:
         uses: madeiramadeirabr/action-generate-release@1.0.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate changelog
-        uses: madeiramadeirabr/action-generate-changelog@0.2.0
-        with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-
+      
       - name: get last tag
         id: res
         uses: madeiramadeirabr/action-get-last-tag@0.1.0
