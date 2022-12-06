@@ -15,13 +15,13 @@ To use the library, you need to install with NPM or YARN:
 ###### YARN
 
 ```bash
-$ yarn add git+ssh://git@github.com:madeiramadeirabr/nest-js-logger.git
+$ yarn add mm-nestjs-logger
 ```
 
 ###### NPM
 
 ```bash
-$ npm install git+ssh://git@github.com:madeiramadeirabr/nest-js-logger.git
+$ npm install mm-nestjs-logger
 ```
 
 ## Test

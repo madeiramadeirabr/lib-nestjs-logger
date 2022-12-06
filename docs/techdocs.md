@@ -26,13 +26,13 @@ Para usar a biblioteca, você precisa instalar utilizando NPM ou YARN:
 ###### YARN
 
 ```bash
-$ yarn add nest-js-logger
+$ yarn add mm-nestjs-logger
 ```
 
 ###### NPM
 
 ```bash
-$ npm install git+ssh://git@github.com:madeiramadeirabr/nest-js-logger.git
+$ npm install mm-nestjs-logger
 ```
 
 ### Variáveis de ambiente
@@ -52,6 +52,10 @@ Caso o projeto possua seu nome em uma variável de ambiente nas secrets da madei
 No arquivo `app.module`, insira o código abaixo:
 
 ```bash
+import { NestJsLoggerModule } from 'mm-nestjs-logger';
+```
+
+```bash
 Module({
   imports: [ NestJsLoggerModule ]
 })
@@ -60,6 +64,10 @@ Module({
 ###### Modo 2
 
 No arquivo `app.module`, insira o código abaixo:
+
+```bash
+import { NestJsLoggerModule } from 'mm-nestjs-logger';
+```
 
 ```bash
 Module({
@@ -78,6 +86,10 @@ Module({
 Após realizado o passo anterior será necessário importar o NestJsLoggerModule nos sub-modulos do projeto onde contêm os services que irão usar a biblioteca:
 
 ```bash
+import { NestJsLoggerModule } from 'mm-nestjs-logger';
+```
+
+```bash
 Module({
   imports : [ NestJsLoggerModule ]
 })
@@ -86,7 +98,7 @@ Module({
 Com a biblioteca instalada e todas as configurações feitas, será necessário importá-la nos arquivos onde serão feitos os logs, injetar a dependência e em seguida chamá-la passando o evento a ser enviado.
 
 ```bash
-$ import { NestJsLoggerService } from 'nest-js-logger';
+$ import { NestJsLoggerService } from 'mm-nestjs-logger';
 ```
 
 ```bash
