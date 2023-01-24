@@ -9,5 +9,5 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: squad-core-apis-admin
+  owner: squad-catalog
   
