@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "nest-js-logger": {
+      "type": "library",
+      "root": "libs/nest-js-logger",
+      "entryFile": "index",
+      "sourceRoot": "libs/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/tsconfig.lib.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+name: npm
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  release:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Release
+        id: release
+        uses: madeiramadeirabr/action-generate-release@1.0.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: get last tag
+        id: res
+        uses: madeiramadeirabr/action-get-last-tag@0.1.0
+        with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Build packages /dist
+        run: yarn build
+        
+      - name: Run unit tests
+        run: yarn test
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14.x'
+          registry-url: 'https://registry.npmjs.org'
+
+
+      - run: git config --global user.email ${{ secrets.MAIL }}
+      - run: git config --global user.name ${{ secrets.USER }}
+      - run: npm version ${{ steps.res.outputs.version }} --force
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

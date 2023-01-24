@@ -1,0 +1,45 @@
+name: Publish TechDocs Site
+
+on:
+  push:
+    branches:
+      - production
+    paths:
+      - "docs/**"
+      - "mkdocs.yaml"
+
+jobs:
+  publish-techdocs-site:
+    runs-on: [staging]
+    env:
+      TECHDOCS_S3_BUCKET_NAME: ${{ secrets.GLOBALS_DX_TECHDOCS_PRD }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.GLOBALS_DX_TECHDOCS_PRD_AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.GLOBALS_DX_TECHDOCS_PRD_AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: 'us-east-2'
+      ENTITY_NAMESPACE: 'default'
+      ENTITY_KIND: 'Component'
+      ENTITY_NAME: 'nest-js-logger'
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - uses: actions/setup-python@v3
+
+      - name: Install mkdocs and mkdocs plugins
+        run: pip3 install mkdocs-techdocs-core==1.*
+
+      - name: Generate docs site
+        run: npx @techdocs/cli generate --no-docker --source-dir . --output-dir ./site/techdocs
+
+      - name: Publish docs site
+        run: npx @techdocs/cli publish --publisher-type awsS3 --storage-name $TECHDOCS_S3_BUCKET_NAME --entity $ENTITY_NAMESPACE/$ENTITY_KIND/$ENTITY_NAME

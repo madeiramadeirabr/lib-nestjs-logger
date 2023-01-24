@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "declaration": true,
+      "removeComments": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "esModuleInterop": true,
+
+      "target": "es6",
+      "outDir": "./dist",
+      "rootDir": "./libs",
+      "baseUrl": "./",
+      "noLib": false,
+      "noImplicitAny": false,
+      "skipLibCheck": true,
+      "allowSyntheticDefaultImports": true,
+    },
+    "include": ["libs/**/*.ts", "libs/tests/**/*.ts"],
+    "exclude": ["node_modules", "dist"]
+  }
+
+  
