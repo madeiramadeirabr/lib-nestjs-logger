@@ -6,8 +6,9 @@ metadata:
     github.com/project-slug: madeiramadeirabr/nest-js-logger
   tags:
     - poc
+    - library
 spec:
-  type: service
+  type: library
   lifecycle: production
   owner: squad-catalog
   
