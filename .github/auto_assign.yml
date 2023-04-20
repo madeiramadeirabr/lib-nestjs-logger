@@ -1,0 +1,13 @@
+# Defina como true para adicionar revisores a solicitações de pull
+addReviewers: true
+
+# Defina como true para adicionar responsáveis as solicitações pull
+addAssignees: author
+
+# Uma lista de revisores a serem adicionados a pull requests (nome de usuário do GitHub)
+reviewers: 
+  - CamilaDamasio
+  - FelipeJhordan
+  - PedroFellipe
+
+numberOfReviewers: 2
