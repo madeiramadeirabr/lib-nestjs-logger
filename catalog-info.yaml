@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: nest-js-logger
+  name: library-nest-js-logger
   annotations:
     github.com/project-slug: madeiramadeirabr/nest-js-logger
   tags:
