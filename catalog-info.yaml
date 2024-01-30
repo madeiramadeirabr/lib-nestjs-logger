@@ -2,13 +2,17 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: library-nest-js-logger
+  description: biblioteca para facilitar e padronizar o funcionamento dos logs em projetos nestjs na madeiramadeira
   annotations:
     github.com/project-slug: madeiramadeirabr/nest-js-logger
   tags:
     - poc
     - library
+    - level-1
+  rfc:
+    - MMRFC_LOG: '1.0'
+    - MMRFC_REPOSITORY_NAME: '1.0'
 spec:
   type: library
   lifecycle: production
   owner: squad-catalog
-  
