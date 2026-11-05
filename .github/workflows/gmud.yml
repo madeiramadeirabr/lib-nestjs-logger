@@ -7,7 +7,7 @@ on:
 
 jobs:
   create-gmud:
-    runs-on: ubuntu-latest
+    runs-on: codebuild-madeiramadeira-${{ github.run_id }}-${{ github.run_attempt }}
     name: 'create-gmud'
     steps:
       - if: github.event.pull_request.user.login != 'dependabot[bot]'
